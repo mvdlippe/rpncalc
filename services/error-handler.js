@@ -1,5 +1,3 @@
-const errorHandler = (message, func) => {
-  return new Error(`Error occurred in ${func}: ${message}`);
+const errorHandler = (message, funcName) => {
+  return new Error(`Error occurred in ${funcName}: ${message}`);
 }
-
-export default errorHandler;

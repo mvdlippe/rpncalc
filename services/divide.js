@@ -1,4 +1,5 @@
-import errorHandler from "./error-handler";
+// import errorHandler from "./error-handler.js";
+const errorHandler = require('./error-handler');
 
 const divide = (num1, num2) => {
   // Divide by zero protection
@@ -8,5 +9,3 @@ const divide = (num1, num2) => {
 
   return num1 / num2;
 }
-
-export default divide;
