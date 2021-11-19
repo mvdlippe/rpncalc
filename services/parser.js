@@ -16,3 +16,5 @@ const parser = (inputStr, numbers, operators) => {
 
   return;
 }
+
+module.exports = parser;
