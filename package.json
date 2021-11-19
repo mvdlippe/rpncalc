@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/mvdlippe/rpncalc/issues"
   },
-  "homepage": "https://github.com/mvdlippe/rpncalc#readme"
+  "homepage": "https://github.com/mvdlippe/rpncalc#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }

@@ -1,4 +1,3 @@
-// import errorHandler from "./error-handler.js";
 const errorHandler = require('./error-handler');
 
 const divide = (num1, num2) => {
