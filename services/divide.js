@@ -1,0 +1,12 @@
+import errorHandler from "./error-handler";
+
+const divide = (num1, num2) => {
+  // Divide by zero protection
+  if (num2 === 0) {
+    return errorHandler('Warning: divide by zero', 'divide');
+  }
+
+  return num1 / num2;
+}
+
+export default divide;
