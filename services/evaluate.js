@@ -12,9 +12,15 @@ const evaluate = (numbers, operators) => {
     const num1 = numbers.pop();
     const currOp = operators.shift();
   
-    // Feed these into evaluate and push the result back onto numbers
+    // Feed these into evaluator. If an error is returned, clear numbers and operators and wait for more user input. If not, push the answer into numbers
     const answer = performMathOp(num1, num2, currOp);
-    numbers.push(answer);
+    if (answer instanceof Error) {
+      while (numbers.length) numbers.pop();
+      while (operators.length) numbers.pop();
+      console.log(answer);
+    } else {
+      numbers.push(answer);
+    }
   }
 }
 
@@ -29,7 +35,7 @@ const performMathOp = (num1, num2, operator) => {
   } else if (operator === '/') {
     return divide(num1, num2);
   } else {
-    errorHandler(`Invalid operator "${operator}"`, 'main');
+    return errorHandler(`Invalid operator "${operator}"`, 'main');
   }
 }
 
