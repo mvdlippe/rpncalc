@@ -3,11 +3,11 @@ const errorHandler = require('./services/error-handler');
 const parser = require('./services/parser');
 const evaluate = require('./services/evaluate');
 
-// numbers contains most recent numbers input from the command line, operator contains the math operator to use
-const numbers = [];
-const operators = [];
+const runCalculator = async () => {
+  // numbers contains most recent numbers input from the command line, operator contains the math operator to use
+  const numbers = [];
+  const operators = [];
 
-const main = async () => {
   // Run until user wants to quit
   while (true) {
     // readline interface setup
@@ -43,4 +43,4 @@ const main = async () => {
   }
 }
 
-main();
+runCalculator();
