@@ -1,19 +1,14 @@
-const parser = (inputStr, numbers, operators) => {
-  // Split the string on spaces
-  const inputArr = inputStr.split(' ');
+const parser = (inputArr, numbers, operators) => {
+  // Use type coercion to check for numbers, add them to numbers until an operator is encountered
+  while (typeof +inputArr[0] === 'number' && !isNaN(+inputArr[0])) {
+    numbers.push(+inputArr.shift());
+  }
 
-  // Parse through inputArr and add stuff into the number or operator storage
-  inputArr.forEach((element) => {
-    // Use type coercion to convert string numbers to numbers, skipping over the operators which become NaNs
-    if (typeof +element === 'number' && !isNaN(+element)) {
-      // Add to numbers
-      numbers.push(+element);
-    } else if (typeof element === 'string') {
-      // Add to operators
-      operators.push(element);
-    }
-  });
-
+  // Once an operator is encountered, add them to operators until a number is encountered
+  while (typeof inputArr[0] === 'string') {
+    operators.push(inputArr.shift());
+  }
+  
   return;
 }
 
