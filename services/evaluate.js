@@ -1,7 +1,7 @@
-const add = require('./add');
-const subtract = require('./subtract');
-const multiply = require('./multiply');
-const divide = require('./divide');
+const add = require('./math-ops/add');
+const subtract = require('./math-ops/subtract');
+const multiply = require('./math-ops/multiply');
+const divide = require('./math-ops/divide');
 const errorHandler = require('./error-handler');
 
 const evaluate = (numbers, operators) => {

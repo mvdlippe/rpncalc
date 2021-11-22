@@ -1,4 +1,4 @@
-const errorHandler = require('./error-handler');
+const errorHandler = require('../error-handler');
 
 const subtract = (num1, num2) => {
   // Error protection for invalid number inputs
