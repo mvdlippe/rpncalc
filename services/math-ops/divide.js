@@ -5,7 +5,7 @@ const divide = (num1, num2) => {
   if (typeof num1 === 'number' && typeof num2 === 'number') {
     // Divide by zero protection
     if (num2 === 0) {
-      return errorHandler(`Warning: can't divide by zero: arg 1: ${num1}, arg 2: ${num2}', 'divide`);
+      return errorHandler(`Warning: can't divide by zero: arg 1: ${num1}, arg 2: ${num2}`, 'divide');
     }
 
     return num1 / num2;

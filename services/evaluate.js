@@ -18,6 +18,7 @@ const evaluate = (numbers, operators) => {
       while (numbers.length) numbers.pop();
       while (operators.length) numbers.pop();
       console.log(answer);
+      return answer;
     } else {
       numbers.push(answer);
     }

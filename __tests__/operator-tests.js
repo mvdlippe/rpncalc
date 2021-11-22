@@ -1,8 +1,8 @@
+const { describe, expect, it } = require('@jest/globals');
 const add = require('../services/math-ops/add');
 const subtract = require('../services/math-ops/subtract');
 const multiply = require('../services/math-ops/multiply');
 const divide = require('../services/math-ops/divide');
-const { expect, it } = require('@jest/globals');
 
 describe('Tests for math operators:', () => {
   describe('Add', () => {
@@ -58,8 +58,11 @@ describe('Tests for math operators:', () => {
     });
 
     it('Returns an error if dividing by zero', () => {
-      const answer = divide(4, 0);
-      expect (answer).toBeInstanceOf(Error);
+      const num1 = 4;
+      const num2 = 0;
+      const answer = divide(num1, num2);
+      expect(answer).toBeInstanceOf(Error);
+      expect(answer.message).toEqual(`Error occurred in divide: Warning: can't divide by zero: arg 1: ${num1}, arg 2: ${num2}`)
     });
 
     it('Returns an error if either argument is not a number', () => {
